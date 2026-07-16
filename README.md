@@ -1,7 +1,9 @@
-# LangChain 최소 예제
+# LangChain MCP 최소 예제
 
-LangChain으로 만든 가장 간단한 예제입니다. `프롬프트 → LLM → 출력 파서`로
-이어지는 최소 LCEL 체인 하나를 만들어 실행합니다.
+LangChain에서 MCP(Model Context Protocol) 도구를 사용하는 최소 예제입니다.
+로컬 MCP 서버가 제공하는 도구를 에이전트가 불러와 질문에 답하는 데 사용합니다.
+
+참고: https://docs.langchain.com/oss/python/langchain/mcp
 
 ## 설치
 
@@ -13,11 +15,14 @@ export ANTHROPIC_API_KEY="your-key"
 ## 실행
 
 ```bash
-python main.py                # 기본 질문 실행
-python main.py "질문 내용"     # 원하는 질문 실행
+python main.py                                  # 기본 질문 실행
+python main.py "7 더하기 3은 뭐고, 그 값에 4를 곱하면?"   # 원하는 질문 실행
 ```
 
 ## 구성
 
-- `main.py` — `ChatPromptTemplate | ChatAnthropic | StrOutputParser` 체인
+- `main.py` — `MultiServerMCPClient`로 로컬 MCP 서버에 연결해 도구를 가져오고,
+  `create_agent`로 만든 Claude 기반 에이전트가 그 도구를 사용하도록 하는 스크립트
+- `mcp_server.py` — `add`, `multiply` 도구를 제공하는 로컬 stdio MCP 서버
+  (`mcp.server.fastmcp.FastMCP` 기반)
 - `requirements.txt` — 필요한 패키지
