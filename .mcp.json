@@ -1,0 +1,8 @@
+{
+  "mcpServers": {
+    "pykrx": {
+      "command": "uvx",
+      "args": ["pykrx-mcp"]
+    }
+  }
+}
