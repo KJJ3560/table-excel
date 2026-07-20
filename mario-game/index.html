@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+<title>Plumber Quest — 마리오 스타일 플랫포머</title>
+<link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+  <div id="game-wrap">
+    <div id="top-bar">
+      <button id="mute-btn" type="button" aria-label="음소거 전환">🔊</button>
+    </div>
+    <h1 id="game-title">PLUMBER QUEST</h1>
+    <div id="canvas-shell">
+      <canvas id="game-canvas" width="800" height="480" tabindex="0"></canvas>
+      <div id="touch-controls">
+        <div id="dpad">
+          <div id="touch-left" class="touch-btn">◀</div>
+          <div id="touch-right" class="touch-btn">▶</div>
+        </div>
+        <div id="touch-jump" class="touch-btn">⤒</div>
+      </div>
+    </div>
+    <div id="controls-help">
+      <span>이동: ← → / A D</span>
+      <span>점프: Space / ↑ / Z</span>
+      <span>달리기: Shift</span>
+      <span>일시정지: P</span>
+      <span>음소거: M</span>
+    </div>
+    <p id="audio-hint">오디오 로딩 중... 화면을 클릭하거나 키를 누르면 사운드가 활성화됩니다.</p>
+  </div>
+
+  <script src="js/constants.js"></script>
+  <script src="js/audio.js"></script>
+  <script src="js/input.js"></script>
+  <script src="js/entities.js"></script>
+  <script src="js/level.js"></script>
+  <script src="js/game.js"></script>
+  <script src="js/main.js"></script>
+</body>
+</html>
