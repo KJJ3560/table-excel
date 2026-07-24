@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="color-scheme" content="light dark">
+<title>나의 시작 페이지</title>
+<link rel="stylesheet" href="/static/styles.css">
+</head>
+<body>
+  <main class="page">
+    <header class="hero">
+      <p class="hero-greeting" id="greeting">안녕하세요</p>
+      <p class="hero-clock" id="clock">--:--:--</p>
+      <p class="hero-date" id="date">-</p>
+    </header>
+
+    <section class="card weather-card" aria-live="polite">
+      <h2 class="card-title">오늘의 날씨</h2>
+      <div class="card-body" id="weather-body">
+        <p class="status">날씨 정보를 불러오는 중...</p>
+      </div>
+    </section>
+
+    <section class="card news-card" aria-live="polite">
+      <h2 class="card-title">주요 뉴스</h2>
+      <div class="card-body" id="news-body">
+        <p class="status">뉴스를 불러오는 중...</p>
+      </div>
+    </section>
+  </main>
+
+  <script src="/static/app.js"></script>
+</body>
+</html>
