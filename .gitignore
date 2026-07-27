@@ -3,3 +3,8 @@ __pycache__/
 .venv/
 venv/
 .env
+
+# foreign_ownership 실행 결과물 (히스토리/캐시/리포트) - 로컬에만 누적
+/data/
+/output/
+.pytest_cache/
