@@ -1,2 +1,11 @@
 langchain>=0.3.0
 langchain-anthropic>=0.3.0
+
+# 외국인 지분율 상위 50 추적 (foreign_ownership/)
+pykrx>=1.2.6
+pandas>=2.0.0
+openpyxl>=3.1.0
+requests>=2.31.0
+
+# 테스트
+pytest>=7.4.0
