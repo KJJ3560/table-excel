@@ -1,27 +1,26 @@
 # Todo 리스트 앱
 
-브라우저 localStorage에 데이터를 저장하는 개인용 Todo 리스트 웹앱입니다.
-요구사항은 `PRD.md`, 구현 순서는 `PROMPT_PLAN.md`를 참고하세요.
+브라우저 localStorage에 데이터를 저장하는 개인용 Todo 리스트 앱입니다.
+순수 HTML/CSS/JavaScript로 만들어 빌드 과정 없이 바로 실행됩니다.
+요구사항은 `PRD.md`를 참고하세요.
 
 ## 구조
 
 ```
-frontend/   React + Vite + TypeScript 프론트엔드 (실제 UI, localStorage 연동)
-backend/    Express 서버 (frontend 빌드 결과물을 정적으로 서빙)
+index.html   화면 마크업
+style.css    스타일
+script.js    할 일 CRUD, 카테고리, 진행률, localStorage 연동 로직
 ```
 
-## 개발 실행
+## 실행
+
+`index.html`을 브라우저로 열면 바로 사용할 수 있습니다. 또는 간단한
+정적 서버로 실행해도 됩니다:
 
 ```bash
-npm run install:all   # frontend, backend 의존성 설치
-npm run dev            # frontend 개발 서버 실행 (http://localhost:5173)
-```
-
-## 프로덕션 빌드 실행
-
-```bash
-npm run build   # frontend를 frontend/dist로 빌드
-npm start        # frontend 빌드 후 backend가 정적으로 서빙 (http://localhost:3000)
+npx serve .
+# 또는
+python3 -m http.server
 ```
 
 ## 기타
