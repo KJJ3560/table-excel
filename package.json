@@ -1,0 +1,11 @@
+{
+  "name": "table-excel",
+  "private": true,
+  "version": "0.0.0",
+  "scripts": {
+    "install:all": "npm install --prefix frontend && npm install --prefix backend",
+    "dev": "npm run dev --prefix frontend",
+    "build": "npm run build --prefix frontend",
+    "start": "npm run build --prefix frontend && npm start --prefix backend"
+  }
+}
