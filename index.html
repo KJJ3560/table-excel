@@ -1,0 +1,44 @@
+<!doctype html>
+<html lang="ko">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Todo 리스트</title>
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <main>
+      <h1>Todo 리스트</h1>
+
+      <section class="progress" aria-live="polite">
+        <p class="progress-text" id="progress-text">완료 0 / 전체 0 · 0%</p>
+        <div class="progress-bar">
+          <div class="progress-bar-fill" id="progress-bar-fill"></div>
+        </div>
+      </section>
+
+      <form id="add-form" class="add-form">
+        <input
+          type="text"
+          id="new-title"
+          placeholder="할 일을 입력하세요"
+          aria-label="할 일 제목"
+          autocomplete="off"
+        />
+        <select id="new-category" aria-label="카테고리">
+          <option value="개인" selected>개인</option>
+          <option value="업무">업무</option>
+          <option value="공부">공부</option>
+        </select>
+        <button type="submit">추가</button>
+      </form>
+
+      <ul id="todo-list" class="todo-list"></ul>
+      <p id="empty-state" class="empty-state" hidden>
+        할 일이 없습니다. 새로운 할 일을 추가해보세요.
+      </p>
+    </main>
+
+    <script src="script.js"></script>
+  </body>
+</html>
